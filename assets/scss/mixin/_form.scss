@@ -1,0 +1,234 @@
+// @import '../import/import-files';
+
+@mixin form-control-setting-dark($typography: 't-font-size12') {
+  background-color: app-color('primarydark-bg');
+  border: 1px solid app-color('maingraydark-bg');
+  color: app-color('white-bg');
+  @include padding(17px 24px);
+  @include position(relative, null, null, null, null);
+  @include border-radius(3px);
+  @extend %#{$typography};
+  display: block;
+  @include appearance(textfield);
+  box-shadow: none;
+  font-family: $font-overpassLight;
+
+  &:-internal-autofill-selected {
+    background-color: #292929 !important;
+    border: 1px solid #383838 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill {
+    background-color: #292929 !important;
+    border: 1px solid #383838 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid #383838 !important;
+    -webkit-text-fill-color: app-color('white-bg') !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: app-color('maingraydark-bg');
+  }
+}
+
+@mixin form-control-md-dark($typography: 't-font-size12') {
+  background-color: app-color('primarydark-bg');
+  border: 1px solid app-color('maingraydark-bg');
+  color: app-color('white-bg');
+  @include padding(10px 15px);
+  @include size-height(40px);
+  @include size-min-height(auto);
+  @include position(relative, null, null, null, null);
+  @include border-radius(3px);
+  @extend %#{$typography};
+  display: block;
+  @include appearance(textfield);
+  box-shadow: none;
+  font-family: $font-overpassBold;
+
+  &:-internal-autofill-selected {
+    background-color: app-color('primarydark-bg' !important);
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill {
+    background-color: app-color('primarydark-bg' !important);
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-text-fill-color: app-color('white-bg') !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: app-color('maingraydark-bg');
+  }
+}
+
+@mixin form-control-setting-gray($typography: 't-font-size12') {
+  background-color: app-color('gray-bg');
+  border: 1px solid app-color('maingraydark-bg');
+  color: app-color('white-bg');
+  @include padding(17px 15px);
+  @include position(relative, null, null, null, null);
+  @include border-radius(3px);
+  @extend %#{$typography};
+  display: block;
+  @include appearance(textfield);
+  box-shadow: none;
+  font-family: $font-overpassBold;
+  appearance: none;
+
+  &:after {
+    content: '';
+    @include position(absolute, 50%, 20px, null, null);
+    background-image: url('../../assets/images/icons/arrow-down.png');
+    @include size-width(13px);
+    @include size-height(12px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &:-internal-autofill-selected {
+    background-color: app-color('gray-bg' !important);
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill {
+    background-color: app-color('gray-bg' !important);
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid app-color('maingraydark-bg' !important);
+    -webkit-text-fill-color: app-color('white-bg') !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: app-color('maingraydark-bg');
+  }
+}
+
+@mixin form-control-md-lightgray($typography: 't-font-size12') {
+  background-color: app-color('maingraydark-bg');
+  border: 1px solid #494949;
+  color: app-color('white-bg');
+  @include padding(10px 15px);
+  @include size-height(40px);
+  @include size-min-height(auto);
+  @include position(relative, null, null, null, null);
+  @include border-radius(3px);
+  @extend %#{$typography};
+  display: block;
+  @include appearance(textfield);
+  box-shadow: none;
+  font-family: $font-overpassBold;
+  appearance: none;
+
+  &:-internal-autofill-selected {
+    background-color: app-color('maingraydark-bg' !important);
+    border: 1px solid #494949 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill {
+    background-color: app-color('maingraydark-bg' !important);
+    border: 1px solid #494949 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid #494949 !important;
+    -webkit-text-fill-color: app-color('white-bg') !important;
+    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #494949;
+  }
+}
+
+@mixin form-label-setting-white($typography: 't-font-size12') {
+  color: app-color('white-bg');
+  @include position(relative, null, null, null, null);
+  @extend %#{$typography};
+  display: block;
+  box-shadow: none;
+  font-family: $font-overpassLight;
+  text-transform: uppercase;
+  @include margin-bottom(10px);
+}
+
+
+@mixin form-check-dark-outline {
+  @include margin-bottom(8px);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  position: relative;
+
+  .form-check-input {
+    background-color: app-color('maindark-bg');
+    border: 1px solid app-color('gray-bg');
+    @include border-radius(3px);
+    @include size-height(20px);
+    @include size-width(20px);
+    @include margin-right(20px);
+
+    &:checked {
+      // @include background-image("../../../assets/images/icons/checked.png", no-repeat, center, 14px, transparent);
+      background-image: url('../../assets/images/icons/checked.png');
+      background-position: center;
+      background-size: 14px;
+      background-color: transparent;
+      border-color: app-color('main-bg');
+    }
+  }
+
+  .form-check-label {
+    flex: 0 0 90%;
+    @include size-max-width(90%);
+
+    .form-control {
+      background-color: app-color('primarydark-bg');
+      border: 1px solid app-color('maingraydark-bg');
+      @include border-radius(3px);
+      @include size-height(40px);
+      @include size-width(100%);
+    }
+  }
+}

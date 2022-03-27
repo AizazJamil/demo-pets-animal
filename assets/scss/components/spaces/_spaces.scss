@@ -1,0 +1,7 @@
+@mixin spaces-80 {
+    @include padding(80px 0);
+}
+
+.spaces-80 {
+    @include spaces-80;
+}

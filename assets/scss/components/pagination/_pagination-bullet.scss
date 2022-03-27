@@ -1,0 +1,21 @@
+@mixin pagination {
+    @include margin-top(4rem);
+    bottom: -30px !important;
+
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 1px solid app-color('black-bg');
+        @include size-width(7px);
+        @include size-height(7px);
+        opacity: 1;
+
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: app-color('black-bg');
+    }
+}
+
+.swiper-pagination {
+    @include pagination;
+}

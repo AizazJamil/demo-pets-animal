@@ -1,0 +1,165 @@
+@mixin ft-link-inner {
+    position: relative;
+    @include margin-top(75px);
+    display: block;
+
+    .ft-logo {
+        text-align: center;
+        position: relative;
+
+        .copyright {
+            font-size: 18px;
+            font-weight: lighter;
+            font-family: $font-light;
+            color: app-color('white-bg');
+            text-align: center;
+            line-height: 21.09px;
+            display: block;
+            @include margin-top(20px);
+        }
+
+        .download-link {
+            @include margin-top(30px);
+            position: relative;
+            text-align: center;
+            color: app-color('white-bg');
+            font-size: 18px;
+            font-weight: bold;
+            font-family: $font-bold;
+            display: inline-block;
+            text-decoration: underline;
+
+            img {
+                // @include position(relative, )
+                vertical-align: middle;
+                @include margin-right(10px);
+            }
+        }
+    }
+
+    .social-link {
+        @include margin-bottom(45px);
+
+        h5 {
+            font-size: 24px;
+            font-weight: normal;
+            font-family: $font-regular;
+            text-align: center;
+            position: relative;
+            color: app-color('white-bg');
+            line-height: 28.13px;
+        }
+
+        .social_inline {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-wrap(wrap);
+            position: relative;
+            @include flex-direction(row);
+
+            li {
+                &:not(:last-of-type) {
+                    @include margin-right(5px);
+                }
+
+                a {
+                    color: app-color('black-bg');
+                    text-decoration: none;
+                    background-color: #ccffff;
+                    @include size-width(30px);
+                    @include size-height(30px);
+                    line-height: 30px;
+                    @include flexbox();
+                    @include justify-content(center);
+                    @include align-items(center);
+                    @include border-radius(100px);
+                }
+            }
+        }
+    }
+
+    .ft-link {
+        &.ft-link-nav {
+            @include for-tablet-landscape-sdown {
+                display: none;
+            }
+        }
+
+        li {
+            @include padding-left(15px);
+
+            &.connect_text {
+                @include flexbox();
+                @include align-items(center);
+
+                a {
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-family: $font-regular;
+                    line-height: 21.09px;
+
+                    .icon {
+                        float: left;
+                        @include margin-right(15px);
+                    }
+
+                    img {
+                        vertical-align: middle;
+
+                    }
+                }
+            }
+
+            &:not(:last-of-type) {
+                @include margin-bottom(10px);
+            }
+
+            a {
+                font-size: 24px;
+                font-weight: normal;
+                font-family: $font-regular;
+                text-align: left;
+                color: app-color('white-bg');
+                line-height: 28.13px;
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+
+                &:hover {
+                    color: app-color('orange-bg');
+                    @include transition(0.25s ease);
+                }
+            }
+        }
+    }
+
+    .ft-head {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: $font-bold;
+        line-height: 35.16px;
+        text-align: left;
+        position: relative;
+        color: app-color('white-bg');
+        @include margin-bottom(25px);
+
+        @include for-tablet-landscape-sdown {
+            font-size: 17px;
+            line-height: 20.57px;
+            // border-top: 1px solid app-color('white-bg');
+            border-bottom: 1px solid app-color('white-bg');
+            @include padding(15px 20px);
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+            @include flex-wrap(wrap);
+        }
+    }
+}
+
+.ft-link-inner {
+    @include ft-link-inner;
+}

@@ -1,0 +1,50 @@
+@import '../import/import-files';
+
+.grid__1 {
+    @include grid('grid-template-columns', 'repeat(1, auto)', 10px, 15px);
+}
+
+.grid__2 {
+    @include grid('grid-template-columns', 'repeat(2, auto)', 10px, 15px);
+}
+
+.grid__3 {
+    // @include grid('grid-template-rows', '1fr 2fr', 10px, 20px);
+    @include grid('grid-template-columns', 'repeat(3, auto)', 10px, 15px);
+}
+
+.grid__4 {
+    @include grid('grid-template-columns', 'repeat(4, auto)', 10px, 15px);
+}
+
+.grid__5 {
+    @include grid('grid-template-columns', 'repeat(5, auto)', 10px, 15px);
+}
+
+.grid__6 {
+    @include grid('grid-template-columns', 'repeat(6, auto)', 10px, 15px);
+}
+
+.grid__7 {
+    @include grid('grid-template-columns', 'repeat(7, auto)', 10px, 15px);
+}
+
+.grid__8 {
+    @include grid('grid-template-columns', 'repeat(8, auto)', 10px, 15px);
+}
+
+.grid__9 {
+    @include grid('grid-template-columns', 'repeat(9, auto)', 10px, 15px);
+}
+
+.grid__10 {
+    @include grid('grid-template-columns', 'repeat(10, auto)', 10px, 15px);
+}
+
+.grid__11 {
+    @include grid('grid-template-columns', 'repeat(11, auto)', 10px, 15px);
+}
+
+.grid__12 {
+    @include grid('grid-template-columns', 'repeat(12, auto)', 10px, 15px);
+}

@@ -1,0 +1,17 @@
+@mixin promotion-section {
+    @include padding(80px 0);
+
+    a {
+        display: block;
+        @include transition(0.25s ease);
+
+        &:hover {
+            @include transition(0.25s ease);
+            @include prefix(transform, scale(1.02), webkit ms);
+        }
+    }
+}
+
+.promotion-section {
+    @include promotion-section;
+}

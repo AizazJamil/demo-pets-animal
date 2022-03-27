@@ -1,0 +1,128 @@
+@mixin main-header {
+    background-color: app-color('white-bg');
+    @include padding(20px 0);
+    position: relative;
+    display: inline-block;
+    @include size-width(100%);
+    border-bottom: 3px solid #F2F2F2;
+
+    .btn {
+        @include for-tablet-landscape-sdown {
+            font-size: 7px;
+            line-height: 8.03px;
+            @include padding(6px 10px);
+
+            .icon {
+                @include margin-right(4px);
+
+                img {
+                    @include size-width(8px);
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .logo-brand {
+        img {
+            @include for-tablet-landscape-sdown {
+                @include size-width(33px);
+                @include size-height(34px);
+            }
+        }
+    }
+
+
+    .inline-flex-header {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        @include justify-content(space-between);
+    }
+
+    .search-field {
+        .form {
+            &-group {
+                background-color: app-color('main-gray-bg');
+                @include border-radius(100px);
+                @include padding(12px 10px);
+                @include size-width(350px);
+                @include position(relative, null, null, null, null);
+
+                @include for-tablet-landscape-sdown {
+                    @include size-width(120px);
+                }
+
+                .search-icon {
+                    @include position(absolute, 50%, null, null, 10px);
+                    @include prefix(transform, translateY(-40%), webkit ms);
+                }
+            }
+
+            &-control {
+                background-color: transparent;
+                border: none;
+                @include padding(0 0 0 30px);
+                @include focus();
+                color: app-color('gray-bg');
+                font-size: 16px;
+                font-weight: normal;
+                font-family: $font-regular;
+                line-height: 19px;
+
+                @media (max-width: 767px) {
+                    font-size: 8px;
+                    line-height: 8.2px;
+                }
+
+                &:focus {
+                    @include focus();
+                }
+            }
+        }
+    }
+
+    .store-link {
+        text-decoration: none;
+        color: app-color('black-bg');
+        @include flexbox();
+        @include align-items(center);
+
+        @include for-tablet-landscape-sdown {
+            display: none;
+        }
+
+        .text {
+            // display: block;
+            @include padding-left(15px);
+
+            strong {
+                font-weight: bold;
+                font-family: $font-bold;
+                font-size: 20px;
+                display: block;
+                line-height: 23.44px;
+            }
+
+            .md-title {
+                font-weight: lighter;
+                font-family: $font-light;
+                font-size: 18px;
+                display: block;
+                line-height: 21.09px;
+            }
+        }
+    }
+
+    .basket-link {
+        img {
+            @include for-tablet-landscape-down {
+                @include size-width(11px);
+            }
+        }
+    }
+}
+
+.main-header {
+    @include main-header;
+}

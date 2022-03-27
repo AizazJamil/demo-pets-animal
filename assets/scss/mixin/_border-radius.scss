@@ -1,0 +1,15 @@
+@mixin border-radius-0 {
+    @include border-radius(0);
+}
+
+@mixin border-top-start-radius-5 {
+    @include border-top-start-radius(5px);
+}
+
+@mixin border-top-start-radius-3 {
+    @include border-top-start-radius(3px);
+}
+
+@mixin border-top-end-radius-3 {
+    @include border-top-start-radius(3px);
+}

@@ -1,0 +1,7 @@
+@mixin yourMixinName($position, $size, $stroke) {
+    position: absolute;
+    width: $size;
+    height: $size;
+    margin-#{$position}: -($size / 2) - $stroke;
+    content: '';
+}

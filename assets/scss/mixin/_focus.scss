@@ -1,0 +1,5 @@
+@mixin focus($outline: none, $box-shadow: none, $border: none) {
+    outline: $outline;
+    box-shadow: $box-shadow;
+    border: $border;
+}

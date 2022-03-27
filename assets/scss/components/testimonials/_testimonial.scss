@@ -1,0 +1,169 @@
+@mixin client-feedback-section {
+    position: relative;
+    display: block;
+    @include size-width(100%);
+    @include padding(80px 0);
+
+    .swiper {
+        &-button-next {
+            &:after {
+                display: none;
+            }
+
+            // @include for-tablet-landscape-sdown {
+            // }
+        }
+
+        &-button-prev {
+            &:after {
+                display: none;
+            }
+
+            // @include for-tablet-landscape-sdown {
+            // }
+        }
+    }
+
+    .feedback-swiper-container {
+        @include size-max-width(90%);
+        @include padding-bottom(50px);
+    }
+
+    .swiper-slide-active {
+        // background-color: app-color('orange-bg');
+        // @include prefix(transform, scale(1.1), webkit ms);
+
+        .client-feedback-concept {
+            background-color: app-color('orange-bg');
+
+            p,
+            .fa,
+            h5,
+            small {
+                color: app-color('white-bg');
+            }
+        }
+    }
+
+    .client {
+        &-feedback-concept {
+            position: relative;
+            background-color: app-color('white-bg');
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            @include border-radius(10px);
+            @include padding(30px 20px);
+
+            @include for-tablet-landscape-sdown {
+                @include padding(20px 10px);
+            }
+        }
+
+        &-author {
+            img {
+                @include size-width(85px);
+                @include size-height(85px);
+                @include border-radius(100px);
+                position: relative;
+
+                @include for-tablet-landscape-sdown {
+                    @include size-width(35px);
+                    @include size-height(35px);
+                }
+            }
+        }
+
+        &-rating {
+            position: relative;
+            @include margin(20px 0);
+
+            @include for-tablet-landscape-sdown {
+                @include margin(0 0 10px 0);
+            }
+
+            .rating-flex {
+                @include flexbox();
+                @include flex-wrap(wrap);
+                @include align-items(center);
+                @include flex-direction(row);
+                @include justify-content(flex-start);
+                position: relative;
+
+                li {
+                    &:not(:last-of-type) {
+                        @include margin-right(5px);
+                    }
+                }
+
+                .fa {
+                    color: app-color('yellow-bg');
+                    font-size: 25px;
+
+                    @include for-tablet-landscape-sdown {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        &-feedback-content {
+            p {
+                font-size: 14px;
+                font-weight: normal;
+                font-family: $font-regular;
+                text-align: left;
+                color: app-color('black-bg');
+                line-height: 16.41px;
+                position: relative;
+                display: block;
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 6px;
+                    line-height: 7.03px;
+                }
+            }
+
+            .name-author {
+                font-family: $font-bold;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: center;
+                text-align: center;
+                position: relative;
+                color: app-color('black-bg');
+                @include margin-top(15px);
+                @include margin-bottom(0);
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 9px;
+                    line-height: 10.55px;
+                }
+
+            }
+
+            .sm-text {
+                font-family: $font-regular;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: center;
+                position: relative;
+                color: app-color('black-bg');
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 9px;
+                    line-height: 10.55px;
+                }
+
+            }
+        }
+    }
+}
+
+.client-feedback-section {
+    @include client-feedback-section;
+}

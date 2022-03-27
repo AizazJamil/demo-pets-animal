@@ -1,0 +1,97 @@
+@mixin explore-categories-section {
+    @include padding(50px 0);
+    display: block;
+    position: relative;
+    @include size-width(100%);
+
+    .col-inner-4 {
+        @include for-tablet-landscape-sdown {
+            @include size-width(33.333% !important);
+            @include padding-left(5px);
+            @include padding-right(5px);
+        }
+    }
+
+    .categories {
+        &-inner {
+            position: relative;
+            @include margin-top(10px);
+
+            .mobile-img-fluid {
+                @include for-tablet-landscape-sdown {
+                    @include size-height(250px);
+                }
+            }
+        }
+
+        &__link {
+            display: block;
+            @include transition(0.25s ease);
+            // @include overflow(hidden, hidden);
+            text-decoration: none;
+
+            &:hover {
+                @include transition(0.25s ease);
+                @include prefix(transform, scale(1.02), webkit ms);
+            }
+        }
+
+        &-dropped {
+            @include size-width(100%);
+            position: relative;
+
+            .badge-inner {
+                @include position(absolute, 10px, null, null, 10px);
+                font-size: 12px;
+                font-weight: normal;
+                font-family: $font-regular;
+                line-height: 14.06px;
+                z-index: 10;
+                @include border-radius(0);
+                @include padding(4px 8px);
+            }
+
+
+            .bagde-dark {
+                background-color: app-color('black-bg');
+                color: app-color('white-bg');
+            }
+
+
+            .bagde-white-border {
+                @include position(absolute, 10px, null, null, 10px);
+                background-color: app-color('white-bg');
+                border: 2px solid app-color('black-bg');
+                color: app-color('black-bg');
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 6px;
+                    line-height: 7.26px;
+                }
+            }
+        }
+    }
+
+    .slider-inner {
+        position: relative;
+
+        .swiper-wrapper {
+            @include size-max-width(90%);
+            @include size-width(100%);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include prefix(transform, translateY(0%), webkit ms);
+            top: 130px;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.explore-categories-section {
+    @include explore-categories-section;
+}

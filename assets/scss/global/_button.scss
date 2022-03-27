@@ -1,0 +1,104 @@
+@mixin nav-dark-button {
+  background-color: app-color('black-bg');
+  border: none;
+  color: app-color('white-bg');
+  @include border-radius(5px);
+  @include padding(10px 15px);
+  font-size: 16px;
+  font-weight: normal;
+  font-family: $font-regular;
+  line-height: 19px;
+  @include transition(0.25s ease);
+
+  .icon {
+    @include margin-right(10px);
+
+    img {
+      vertical-align: middle;
+      @include position(relative, null, null, 2px, null);
+    }
+  }
+
+  &:focus {
+    @include focus();
+  }
+
+  &:hover {
+    @include focus();
+    background-color: app-color('orange-bg');
+    color: app-color('white-bg');
+    @include transition(0.25s ease);
+  }
+}
+
+@mixin nav-outline-button {
+  background-color: transparent;
+  border: 1px solid app-color('black-bg');
+  color: app-color('black-bg');
+  @include border-radius(5px);
+  @include padding(10px 15px);
+  font-size: 16px;
+  font-weight: normal;
+  font-family: $font-regular;
+  line-height: 19px;
+  @include transition(0.25s ease);
+
+  .icon {
+    @include margin-right(10px);
+
+    img {
+      vertical-align: middle;
+      @include position(relative, null, null, 2px, null);
+    }
+  }
+
+  &:focus {
+    @include focus();
+  }
+
+  &:hover {
+    @include focus();
+    border: 1px solid app-color('orange-bg');
+    background-color: app-color('orange-bg');
+    color: app-color('white-bg');
+    @include transition(0.25s ease);
+  }
+}
+
+@mixin main-white-button {
+  background-color: app-color('white-bg');
+  // border: 1px solid app-color('white-bg');
+  border: none;
+  color: app-color('black-bg');
+  @include border-radius(5px);
+  @include padding(10px 25px);
+  font-size: 18px;
+  font-weight: normal;
+  font-family: $font-regular;
+  line-height: 21.09px;
+  @include transition(0.25s ease);
+
+  &:focus {
+    @include focus();
+  }
+
+  &:hover {
+    @include focus();
+    // border: 1px solid app-color('white-bg');
+    background-color: app-color('black-bg');
+    color: app-color('white-bg');
+    @include transition(0.25s ease);
+  }
+}
+
+.nav-dark-button {
+  @include nav-dark-button;
+}
+
+.nav-outline-button {
+  @include nav-outline-button;
+}
+
+.main-white-button {
+  @include main-white-button;
+}

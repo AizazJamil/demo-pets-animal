@@ -1,0 +1,23 @@
+@import '../core/media-queries';
+@import '../global/font-face';
+@import '../global/color';
+@import '../mixin/sizes';
+@import '../mixin/border-radius';
+@import '../mixin/mixin';
+@import '../mixin/overflow';
+@import '../mixin/spaces';
+@import '../mixin/flexbox';
+@import '../mixin/focus';
+@import '../global/button';
+
+@import '../global/body';
+@import '../global/base';
+
+@import '../components/pagination/pagination-bullet';
+@import '../components/spaces/spaces';
+@import '../components/navbar/navbar';
+@import '../components/footer/footer';
+@import '../components/categories/categories';
+@import '../components/head/head';
+@import '../components/promotion/promotion';
+@import '../components/testimonials/testimonial';

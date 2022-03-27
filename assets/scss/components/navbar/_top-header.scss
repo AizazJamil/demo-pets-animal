@@ -1,0 +1,42 @@
+@mixin top-header {
+    background-color: app-color('orange-bg');
+    @include padding(15px 0);
+
+    .top-head-content {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(center);
+
+        h4 {
+            font-family: $font-bold;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: app-color('white-bg');
+            @include margin(0);
+
+            @include for-tablet-landscape-sdown {
+                font-size: 15px;
+            }
+        }
+
+        .btn {
+            @include margin-left(35px);
+
+            @include for-tablet-landscape-sdown {
+                font-size: 10px;
+                line-height: 11.72px;
+                @include padding(8px 13px);
+                @include margin-left(10px);
+            }
+        }
+    }
+}
+
+.top-header {
+    @include top-header;
+}

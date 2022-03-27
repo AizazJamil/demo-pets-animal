@@ -1,0 +1,75 @@
+@mixin categories-card {
+    .categories {
+        &-image {
+            @include size-width(100%);
+            @include size-height(250px);
+            position: relative;
+
+            img {
+                @include border-radius(5px);
+                @include size-height(100%);
+                @include size-width(100%);
+            }
+        }
+
+        &-body {
+            @include padding(10px 0);
+
+            .pet-name {
+                color: app-color('black-bg');
+                text-align: center;
+                position: relative;
+                display: block;
+                font-size: 22px;
+                font-weight: 500;
+                font-family: $font-medium;
+                line-height: 25.78px;
+                @include margin-bottom(5px);
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 10px;
+                    line-height: 11.72px;
+                }
+            }
+
+            .pet-price {
+                color: app-color('black-bg');
+                text-align: center;
+                position: relative;
+                display: block;
+                font-size: 22px;
+                font-weight: lighter;
+                font-family: $font-regular;
+                line-height: 25.78px;
+                @include margin(0);
+
+                @include for-tablet-landscape-sdown {
+                    font-size: 10px;
+                    line-height: 11.72px;
+                }
+            }
+
+            .brand__items {
+                @include margin-bottom(12px);
+
+                li {
+                    color: app-color('black-bg');
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: $font-medium;
+                    position: relative;
+                    display: block;
+                    line-height: 18px;
+
+                    &:not(:last-of-type) {
+                        @include margin-bottom(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.categories-card {
+    @include categories-card;
+}

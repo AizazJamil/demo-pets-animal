@@ -1,0 +1,79 @@
+@mixin navigation-menu {
+    background-color: app-color('wgite-bg');
+    color: app-color('white-bg');
+    @include padding(20px 0);
+
+    .for-mobile {
+        @include for-tablet-landscape-down {
+            display: block !important;
+        }
+
+        @include for-tablet-landscape-up {
+            display: none !important;
+        }
+    }
+
+    .for-desktop {
+        @include for-tablet-landscape-down {
+            display: none !important;
+        }
+
+        @include for-tablet-landscape-up {
+            display: block !important;
+        }
+    }
+
+    @include for-tablet-landscape-down {
+        @include position(fixed, null, 0, 0, 0);
+        @include size-width(100%);
+        z-index: 999;
+        background-color: app-color('white-bg');
+        border-top: 1px solid rgba(237, 237, 237, 1)
+    }
+
+    .navbar {
+
+        &-nav {
+            @include for-tablet-landscape-down {
+                @include flex-direction(row !important);
+                @include justify-content(space-between);
+                @include align-items(flex-end);
+            }
+        }
+    }
+
+    .nav {
+        &-item {
+            &:not(:last-of-type) {
+                @include margin-right(0);
+            }
+        }
+
+        &-link {
+            color: app-color('black-bg');
+            font-size: 24px;
+            font-weight: bold;
+            font-family: $font-bold;
+            @include padding(10px 25px !important);
+
+            @include for-tablet-landscape-down {
+                font-size: 10px;
+                text-align: center;
+                @include padding(0 !important);
+            }
+
+            &:hover {
+                background-color: app-color('black-bg');
+                color: app-color('white-bg');
+            }
+        }
+    }
+}
+
+.navigation-menu {
+    @include navigation-menu;
+}
+
+@import './main-navbar';
+@import './categories-nav';
+@import './top-header';

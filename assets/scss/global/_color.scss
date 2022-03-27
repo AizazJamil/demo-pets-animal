@@ -1,0 +1,14 @@
+$colors: ('orange-bg': #FB5607,
+  'main-bg': #E5E5E5,
+  'white-bg': #ffffff,
+  'black-bg': #000000,
+  'main-gray-bg': #E4E4E4,
+  'gray-bg': #585858,
+  'secondary-bg': #020202,
+  'yellow-bg': #f7ce08,
+
+);
+
+@function app-color($color) {
+  @return map-get($colors, $color);
+}

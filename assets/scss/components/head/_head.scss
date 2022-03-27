@@ -1,0 +1,48 @@
+.sub-head {
+    h1 {
+        font-size: 72px;
+        font-weight: lighter;
+        font-family: $font-light;
+        line-height: 84.38px;
+        font-style: italic;
+        color: app-color('black-bg');
+        text-align: center;
+
+        @include for-tablet-landscape-sdown {
+            font-size: 20px;
+            line-height: 23.44px;
+        }
+    }
+
+    h2 {
+        font-size: 60px;
+        font-weight: normal;
+        font-family: $font-regular;
+        line-height: 70.31px;
+        // font-style: italic;
+        color: app-color('black-bg');
+        text-align: center;
+
+        @include for-tablet-landscape-sdown {
+            font-size: 22px;
+            line-height: 25.78px;
+        }
+    }
+
+    p {
+        font-size: 36px;
+        font-weight: normal;
+        font-family: $font-regular;
+        font-style: normal;
+        color: app-color('black-bg');
+        text-align: center;
+        line-height: 42.19px;
+
+        @include for-tablet-landscape-sdown {
+            font-size: 14px;
+            line-height: 16.41px;
+            font-family: $font-bold;
+            font-weight: bold;
+        }
+    }
+}
